@@ -55,3 +55,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added at 2018-02-21 21:17:20 -0500 by matt:
 gem "rails-erd", "~> 1.5"
+
+# Added at 2018-02-21 21:28:42 -0500 by matt:
+gem "pry-rails", "~> 0.3.6"
+
+# Added at 2018-02-21 21:42:14 -0500 by matt:
+gem "bootstrap", "~> 4.0"
+
+# Added at 2018-02-21 21:43:26 -0500 by matt:
+gem "jquery-rails", "~> 4.3"

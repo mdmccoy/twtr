@@ -1,0 +1,22 @@
+<table class='table'>
+  <tr>
+    <th>User</th>
+    <th>Bio</th>
+    <th>Followers</th>
+    <th>Comments</th>
+  </tr>
+  <% @users.each do |u| %>
+    <tr>
+      <td>
+        <%= u.name %>
+      </td>
+      <td>
+        <%= u.bio %>
+      </td>
+      <td></td>
+      <td>
+        <%= Comment.where(user_id: u.id).count %>
+      </td>
+    </tr>
+  <% end %>
+</table>
