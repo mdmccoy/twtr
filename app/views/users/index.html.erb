@@ -13,7 +13,9 @@
       <td>
         <%= u.bio %>
       </td>
-      <td></td>
+      <td>
+        <%= u.followers.count %>
+      </td>
       <td>
         <%= Comment.where(user_id: u.id).count %>
       </td>
