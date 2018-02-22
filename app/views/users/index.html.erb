@@ -1,4 +1,4 @@
-<table class='table'>
+<!-- <table class='table'>
   <tr>
     <th>User</th>
     <th>Bio</th>
@@ -21,4 +21,56 @@
       </td>
     </tr>
   <% end %>
-</table>
+</table> -->
+
+<div class="outside">
+
+<% @users.each do |u| %>
+
+<div class="container">
+  <header>
+    <div class="bio">
+      <img src="<%=u.picture%>"  alt="background" class="bg">
+      <div class="desc">
+        <h3> <%= u.name %>  </h3>
+        <p> <%= u.bio %>  </p>
+      </div>
+    </div>
+
+    <div class="avatarcontainer">
+      <img src="<%=u.small_picture%>" alt="avatar" class="avatar">
+      <div class="hover">
+        <div class="icon-twitter"></div>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="content">
+    <div class="data">
+      <ul>
+        <li>
+          <%= u.comments.count %>
+          <span>Comments</span>
+        </li>
+        <li>
+          <%= u.followers.count %>
+          <span>Followers</span>
+        </li>
+        <li>
+          <%= u.following.count %>
+          <span>Following</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="follow">
+      <div class="icon-twitter"></div>
+      Follow</div>
+  </div>
+
+</div>
+
+<% end %>
+
+</div>
